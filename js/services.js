@@ -7,6 +7,9 @@
 
         var mainModel = {};
 
+//        mainModel.toggleNavOpen = fun
+
+
         return mainModel;
     });
 

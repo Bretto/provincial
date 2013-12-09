@@ -1,11 +1,11 @@
-/* line 5, ../sass/base.scss */
+/* line 13, ../sass/base.scss */
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 13, ../sass/base.scss */
+/* line 23, ../sass/base.scss */
 body, html {
   background: #f5f5f5;
   padding: 0;
@@ -15,9 +15,13 @@ body, html {
   position: absolute;
 }
 
+/* line 3, ../sass/page.scss */
+.page {
+  margin-top: 50px;
+}
+
 /* line 7, ../sass/screen.scss */
 header.main {
-  margin-left: 300px;
   top: 0;
   left: 0;
   position: absolute;
@@ -25,7 +29,11 @@ header.main {
   height: 50px;
   background: white;
 }
-/* line 18, ../sass/screen.scss */
+/* line 10, ../sass/screen.scss */
+header.main.open {
+  margin-left: 300px;
+}
+/* line 23, ../sass/screen.scss */
 header.main .nav-toggle-btn {
   float: left;
   position: relative;
@@ -38,12 +46,16 @@ header.main .nav-toggle-btn {
   border: 1px solid transparent;
   border-radius: 4px;
 }
-/* line 32, ../sass/screen.scss */
+/* line 37, ../sass/screen.scss */
 header.main .nav-toggle-btn:hover {
-  background-color: #333;
+  background-color: #999;
   border-color: #333;
 }
-/* line 38, ../sass/screen.scss */
+/* line 42, ../sass/screen.scss */
+header.main .nav-toggle-btn:focus {
+  outline: none;
+}
+/* line 47, ../sass/screen.scss */
 header.main .nav-toggle-btn .icon-bar {
   background-color: #000000;
   display: block;
@@ -51,11 +63,11 @@ header.main .nav-toggle-btn .icon-bar {
   height: 2px;
   border-radius: 1px;
 }
-/* line 40, ../sass/screen.scss */
+/* line 49, ../sass/screen.scss */
 header.main .nav-toggle-btn .icon-bar + .icon-bar {
   margin-top: 4px;
 }
-/* line 54, ../sass/screen.scss */
+/* line 63, ../sass/screen.scss */
 header.main h1 {
   position: relative;
   pointer-events: none;
@@ -64,12 +76,29 @@ header.main h1 {
   margin: 3px 0;
 }
 
-/* line 68, ../sass/screen.scss */
+/* line 77, ../sass/screen.scss */
 nav.main {
+  left: -300px;
   width: 300px;
   height: 100%;
   top: 0;
-  left: 0;
   position: absolute;
   background: #E5E5E5;
+}
+/* line 82, ../sass/screen.scss */
+nav.main.open {
+  left: 0;
+}
+
+/* line 99, ../sass/screen.scss */
+section {
+  position: relative;
+}
+/* line 101, ../sass/screen.scss */
+section.main {
+  left: 0;
+}
+/* line 104, ../sass/screen.scss */
+section.main.open {
+  left: 300px;
 }

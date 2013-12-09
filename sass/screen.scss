@@ -1,11 +1,16 @@
 @import "base";
-
+@import "page";
 
 
 header {
 
   &.main{
-    margin-left: 300px;
+
+
+    &.open{
+      margin-left: $nav-width;
+    }
+
     top: 0;
     left: 0;
     position: absolute;
@@ -30,8 +35,12 @@ header {
       border-radius: 4px;
 
       &:hover{
-        background-color: #333;
+        background-color: #999;
         border-color: #333;
+      }
+
+      &:focus {
+        outline: none;
       }
 
 
@@ -67,10 +76,17 @@ header {
 nav{
   &.main{
 
+
+    left: - $nav-width;
+
+    &.open{
+      left: 0;
+    }
+
     width: 300px;
     height: 100%;
     top: 0;
-    left: 0;
+
     position: absolute;
     background: #E5E5E5;
 
@@ -79,4 +95,16 @@ nav{
 
 }
 
+
+section{
+  position: relative;
+  &.main{
+
+    left: 0;
+    &.open{
+      left: $nav-width;
+    }
+
+  }
+}
 
