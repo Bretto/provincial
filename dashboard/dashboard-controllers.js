@@ -6,19 +6,17 @@
 
     module.controller('DashboardCtrl', function ($scope, AppModel, $state, $window, Utils) {
 
+        console.log('DashboardCtrl');
         $scope.mainModel = AppModel;
 
-        $scope.onTest = function(){
-            console.log('test');
-            Utils.test();
-        }
     });
 
     module.controller('DashboardNavCtrl', function ($scope, AppModel, $state, ngLD) {
 
+        console.log('DashboardNavCtrl');
         $scope.mainModel = AppModel;
         $scope.navItems = AppModel.dashboardNav;
-        AppModel.activeNavItem = $scope.findActiveNavItem($scope.navItems, 'dashboardId', $state.params.dashboardId);
+        AppModel.activeNavItem = $scope.findActiveNavItem($scope.navItems, $state.params.dashboardId);
 
 
 //        $scope.onNav = function (item) {

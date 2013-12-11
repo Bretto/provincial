@@ -2,26 +2,26 @@
     "use strict";
 
     var module = angular.module('Territoire', [])
-        .config(function ($stateProvider) {
-            $stateProvider
-                .state('territoire', {
-                    url: '/territoire',
-                    views: {
-                        'page@': {
-                            templateUrl: function (stateParams) {
-                                return 'territoire/territoire-page.html';
-                            },
-                            controller: 'TerritoireCtrl'
-                        },
-                        'nav@': {
-                            templateUrl: function (stateParams) {
-                                return 'territoire/territoire-nav.html';
-                            },
-                            controller: 'TerritoireNavCtrl'
-                        }
-                    }
-                });
-        });
+//        .config(function ($stateProvider) {
+//            $stateProvider
+//                .state('territoire', {
+//                    url: '/territoire',
+//                    views: {
+//                        'page@': {
+//                            templateUrl: function (stateParams) {
+//                                return 'territoire/territoire-page.html';
+//                            },
+//                            controller: 'TerritoireCtrl'
+//                        },
+//                        'nav@': {
+//                            templateUrl: function (stateParams) {
+//                                return 'territoire/territoire-nav.html';
+//                            },
+//                            controller: 'TerritoireNavCtrl'
+//                        }
+//                    }
+//                });
+//        });
 
 
 

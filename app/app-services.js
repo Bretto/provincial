@@ -7,16 +7,15 @@
 
         var appModel = {};
 
-        appModel.dashboardNav = [
-            {label:'Widjets 1', state:'dashboard', params:{dashboardId:'1'}, options:{location:'replace'}},
-            {label:'Widjets 2', state:'dashboard', params:{dashboardId:'2'}, options:{location:'replace'}},
-            {label:'Territoire', state:'territoire'}
+        appModel.dashboard = [
+            {label:'Widgets', pageId:'widgets'},
+            {label:'Territoire', pageId:'territoire', navId:'territoire'}
         ];
 
-        appModel.territoireNav = [
-            {label:'Province Nord', state:'province', params:{provinceId:'nord'}},
-            {label:'Province Sud', state:'province', params:{provinceId:'sud'}},
-            {label:'Province des îles Loyauté', state:'province', params:{provinceId:'iles'}}
+        appModel.territoire = [
+            {label:'Province Nord', pageId:'province-nord', navId:'province-nord'},
+            {label:'Province Sud', pageId:'province-sud', navId:'province-sud'},
+            {label:'Province des îles Loyauté', pageId:'province-iles', navId:'province-iles'}
         ];
 
         appModel.nordNav = [

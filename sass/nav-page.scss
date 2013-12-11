@@ -17,8 +17,22 @@
     >ul{
       @include list-styles;
       margin-top: $header-height;
-      
 
+      li{
+
+        position: relative;
+        >div{
+          padding: 15px 20px;
+
+        }
+
+
+        button{
+          position: absolute;
+          right: 5px;
+          top: 2px;
+        }
+      }
     }
     
   }

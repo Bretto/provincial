@@ -1,17 +1,17 @@
-/* line 13, ../sass/base.scss */
+/* line 7, ../sass/base.scss */
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 19, ../sass/base.scss */
+/* line 13, ../sass/base.scss */
 a:hover, a:focus {
   color: #000;
   text-decoration: none;
 }
 
-/* line 26, ../sass/base.scss */
+/* line 18, ../sass/base.scss */
 body, html {
   background: #f5f5f5;
   padding: 0;
@@ -35,22 +35,22 @@ body, html {
   height: 50px;
   background: #f5f5f5;
 }
-/* line 43, ../sass/base.scss */
+/* line 34, ../sass/base.scss */
 .nav-page > header button {
   margin: 2px;
   border-color: transparent !important;
   background-color: transparent !important;
   position: absolute;
 }
-/* line 49, ../sass/base.scss */
+/* line 40, ../sass/base.scss */
 .nav-page > header button.btn-header-left {
   left: 0;
 }
-/* line 53, ../sass/base.scss */
+/* line 44, ../sass/base.scss */
 .nav-page > header button.btn-header-right {
   right: 0;
 }
-/* line 58, ../sass/base.scss */
+/* line 49, ../sass/base.scss */
 .nav-page > header h1 {
   text-align: center;
   margin: 3px 0;
@@ -75,17 +75,30 @@ body, html {
   padding: 0;
   margin-top: 50px;
 }
-/* line 78, ../sass/base.scss */
-.nav-page > section > ul > li {
+/* line 71, ../sass/base.scss */
+.nav-page > section > ul > li > div {
   padding: 20px;
   background: #eee;
-  border-bottom: solid 1px #F1F1F1;
   border-top: solid 1px #E2E2E2;
 }
-/* line 84, ../sass/base.scss */
-.nav-page > section > ul > li.active {
+/* line 77, ../sass/base.scss */
+.nav-page > section > ul > li > div.active {
   background: royalblue;
   color: #ffffff;
+}
+/* line 21, ../sass/nav-page.scss */
+.nav-page > section > ul li {
+  position: relative;
+}
+/* line 24, ../sass/nav-page.scss */
+.nav-page > section > ul li > div {
+  padding: 15px 20px;
+}
+/* line 30, ../sass/nav-page.scss */
+.nav-page > section > ul li button {
+  position: absolute;
+  right: 5px;
+  top: 2px;
 }
 
 /* line 7, ../sass/screen.scss */
@@ -101,22 +114,22 @@ body, html {
 .main > header.open {
   left: 300px;
 }
-/* line 43, ../sass/base.scss */
+/* line 34, ../sass/base.scss */
 .main > header button {
   margin: 2px;
   border-color: transparent !important;
   background-color: transparent !important;
   position: absolute;
 }
-/* line 49, ../sass/base.scss */
+/* line 40, ../sass/base.scss */
 .main > header button.btn-header-left {
   left: 0;
 }
-/* line 53, ../sass/base.scss */
+/* line 44, ../sass/base.scss */
 .main > header button.btn-header-right {
   right: 0;
 }
-/* line 58, ../sass/base.scss */
+/* line 49, ../sass/base.scss */
 .main > header h1 {
   text-align: center;
   margin: 3px 0;

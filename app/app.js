@@ -16,10 +16,37 @@
                 'Territoire',
                 'Province',
                 'Commune',
-                'Bureau'
+                'Bureau',
+                'Navigator'
             ])
-        .config(function ($urlRouterProvider) {
-            $urlRouterProvider.otherwise("/dashboard/1");
+        .config(function ($urlRouterProvider, $stateProvider) {
+
+            $stateProvider
+                .state('navigator', {
+                    url: '/navigator/:navId',
+                    views: {
+                        'nav@': {
+                            templateUrl: function (stateParams) {
+                                return 'navigator/navigator.html';
+                            },
+                            controller: 'NavigatorCtrl'
+                        }
+                    }
+                })
+                .state('navigator.page', {
+                    url: '/page/:pageId',
+                    views: {
+                        'page@': {
+                            templateUrl: function (stateParams) {
+                                return 'page/' + stateParams.pageId + '.html';
+                            }
+//                            controller: 'DashboardCtrl'
+                        }
+                    }
+                });
+
+
+            $urlRouterProvider.otherwise("/navigator/dashboard/page/widgets");
         })
         .run(
         function ($rootScope, $state, $stateParams, $log) {
