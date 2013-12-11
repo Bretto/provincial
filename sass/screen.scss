@@ -1,110 +1,51 @@
 @import "base";
-@import "page";
+@import "content-page";
+@import "nav-page";
 
+.main {
 
-header {
+  >header {
 
-  &.main{
-
-
-    &.open{
-      margin-left: $nav-width;
+    &.open {
+      left: $nav-width;
     }
 
-    top: 0;
-    left: 0;
-    position: absolute;
-
-    width: 100%;
-    height: 50px;
+    @include nav-header;
     background: white;
 
-
-    .nav-toggle-btn{
-
-      float: left;
-      
-      position: relative;
-      padding: 9px 10px;
-      margin-top: 8px;
-      margin-right: 15px;
-      margin-left: 10px;
-      margin-bottom: 8px;
-      background-color: transparent;
-      border: 1px solid transparent;
-      border-radius: 4px;
-
-      &:hover{
-        background-color: #999;
-        border-color: #333;
-      }
-
-      &:focus {
-        outline: none;
-      }
-
-
-      .icon-bar {
-
-        +.icon-bar{
-          margin-top: 4px;
-        }
-
-        background-color: #000000;
-
-        display: block;
-        width: 22px;
-        height: 2px;
-        border-radius: 1px;
-      }
-
-    }
-
-    h1{
-      position: relative;
-      pointer-events: none;
-      text-align: center;
-      color: #000000;
-      margin: 3px 0;
-
-    }
-
   }
-}
 
-
-nav{
-  &.main{
-
-
-    left: - $nav-width;
-
-    &.open{
-      left: 0;
-    }
-
-    width: 300px;
-    height: 100%;
-    top: 0;
+  >nav {
 
     position: absolute;
-    background: #E5E5E5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: $nav-width;
 
+    background: gainsboro;
 
   }
 
-}
+  >section {
 
-
-section{
-  position: relative;
-  &.main{
+    @include box-shadow(0 0 10px 5px rgba(#000,.2));
+    position: absolute;
 
     left: 0;
-    &.open{
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    background: whitesmoke;
+
+    &.open {
       left: $nav-width;
     }
 
   }
+
+
 }
+
 

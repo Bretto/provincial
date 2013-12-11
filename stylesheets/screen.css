@@ -5,7 +5,13 @@
   box-sizing: border-box;
 }
 
-/* line 23, ../sass/base.scss */
+/* line 19, ../sass/base.scss */
+a:hover, a:focus {
+  color: #000;
+  text-decoration: none;
+}
+
+/* line 26, ../sass/base.scss */
 body, html {
   background: #f5f5f5;
   padding: 0;
@@ -15,90 +21,128 @@ body, html {
   position: absolute;
 }
 
-/* line 3, ../sass/page.scss */
-.page {
+/* line 3, ../sass/content-page.scss */
+.content-page {
   margin-top: 50px;
 }
 
-/* line 7, ../sass/screen.scss */
-header.main {
+/* line 3, ../sass/nav-page.scss */
+.nav-page > header {
+  position: absolute;
   top: 0;
   left: 0;
+  right: 0;
+  height: 50px;
+  background: #f5f5f5;
+}
+/* line 43, ../sass/base.scss */
+.nav-page > header button {
+  margin: 2px;
+  border-color: transparent !important;
+  background-color: transparent !important;
   position: absolute;
-  width: 100%;
+}
+/* line 49, ../sass/base.scss */
+.nav-page > header button.btn-header-left {
+  left: 0;
+}
+/* line 53, ../sass/base.scss */
+.nav-page > header button.btn-header-right {
+  right: 0;
+}
+/* line 58, ../sass/base.scss */
+.nav-page > header h1 {
+  text-align: center;
+  margin: 3px 0;
+}
+/* line 8, ../sass/nav-page.scss */
+.nav-page > header h1 {
+  font-size: 20px;
+  margin: 12px;
+}
+/* line 17, ../sass/nav-page.scss */
+.nav-page > section > ul {
+  list-style-type: none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin: 0;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 0;
+  margin-top: 50px;
+}
+/* line 78, ../sass/base.scss */
+.nav-page > section > ul > li {
+  padding: 20px;
+  background: #eee;
+  border-bottom: solid 1px #F1F1F1;
+  border-top: solid 1px #E2E2E2;
+}
+/* line 84, ../sass/base.scss */
+.nav-page > section > ul > li.active {
+  background: royalblue;
+  color: #ffffff;
+}
+
+/* line 7, ../sass/screen.scss */
+.main > header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 50px;
   background: white;
 }
-/* line 10, ../sass/screen.scss */
-header.main.open {
-  margin-left: 300px;
+/* line 9, ../sass/screen.scss */
+.main > header.open {
+  left: 300px;
 }
-/* line 23, ../sass/screen.scss */
-header.main .nav-toggle-btn {
-  float: left;
-  position: relative;
-  padding: 9px 10px;
-  margin-top: 8px;
-  margin-right: 15px;
-  margin-left: 10px;
-  margin-bottom: 8px;
-  background-color: transparent;
-  border: 1px solid transparent;
-  border-radius: 4px;
+/* line 43, ../sass/base.scss */
+.main > header button {
+  margin: 2px;
+  border-color: transparent !important;
+  background-color: transparent !important;
+  position: absolute;
 }
-/* line 37, ../sass/screen.scss */
-header.main .nav-toggle-btn:hover {
-  background-color: #999;
-  border-color: #333;
+/* line 49, ../sass/base.scss */
+.main > header button.btn-header-left {
+  left: 0;
 }
-/* line 42, ../sass/screen.scss */
-header.main .nav-toggle-btn:focus {
-  outline: none;
+/* line 53, ../sass/base.scss */
+.main > header button.btn-header-right {
+  right: 0;
 }
-/* line 47, ../sass/screen.scss */
-header.main .nav-toggle-btn .icon-bar {
-  background-color: #000000;
-  display: block;
-  width: 22px;
-  height: 2px;
-  border-radius: 1px;
-}
-/* line 49, ../sass/screen.scss */
-header.main .nav-toggle-btn .icon-bar + .icon-bar {
-  margin-top: 4px;
-}
-/* line 63, ../sass/screen.scss */
-header.main h1 {
-  position: relative;
-  pointer-events: none;
+/* line 58, ../sass/base.scss */
+.main > header h1 {
   text-align: center;
-  color: #000000;
   margin: 3px 0;
 }
-
-/* line 77, ../sass/screen.scss */
-nav.main {
-  left: -300px;
-  width: 300px;
-  height: 100%;
-  top: 0;
+/* line 18, ../sass/screen.scss */
+.main > nav {
   position: absolute;
-  background: #E5E5E5;
-}
-/* line 82, ../sass/screen.scss */
-nav.main.open {
+  top: 0;
   left: 0;
+  bottom: 0;
+  width: 300px;
+  background: gainsboro;
 }
-
-/* line 99, ../sass/screen.scss */
-section {
-  position: relative;
-}
-/* line 101, ../sass/screen.scss */
-section.main {
+/* line 30, ../sass/screen.scss */
+.main > section {
+  -moz-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+  position: absolute;
   left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: whitesmoke;
 }
-/* line 104, ../sass/screen.scss */
-section.main.open {
+/* line 42, ../sass/screen.scss */
+.main > section.open {
   left: 300px;
 }

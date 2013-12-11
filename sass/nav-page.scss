@@ -1,0 +1,26 @@
+.nav-page{
+
+  >header{
+
+    @include nav-header;
+    background: #f5f5f5;
+
+    h1{
+      font-size: 20px;
+      margin: 12px;
+    }
+
+  }
+
+  >section{
+
+    >ul{
+      @include list-styles;
+      margin-top: $header-height;
+      
+
+    }
+    
+  }
+
+}
