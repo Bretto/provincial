@@ -8,21 +8,20 @@
         console.log('NavigatorCtrl');
 
         $scope.onPage = function(item){
-            AppModel.activeNavItem = item;
+            $scope.activeNavItem = item;
 
             var state = 'navigator.page';
-            var params =  {pageId: item.pageId};
+            var params =  {pageId: item.id};
             var options =  {location:'replace'};
 
             $state.go(state, params, options);
         }
 
         $scope.onNav = function(item){
-            console.log('onNav');
-            var state = 'navigator.page';
-            var params =  {navId: item.navId, pageId: item.pageId};
-            var options =  {};
 
+            var state = 'navigator.page';
+            var params =  {navId: item.id, pageId: item.id};
+            var options =  {};
 
             $state.go(state, params, options);
         }
@@ -33,14 +32,14 @@
         }
 
         $scope.isActiveNavItem = function (item) {
-            return AppModel.activeNavItem === item;
+            return $scope.activeNavItem === item;
         }
 
         $scope.findActiveNavItem = function(items, value){
 
             var res = null;
             angular.forEach(items, function(item){
-                if(item.pageId === value){
+                if(item.id === value){
                     res = item;
                 }
             });
@@ -51,7 +50,7 @@
 
         $scope.mainModel = AppModel;
         $scope.navItems = AppModel[$state.params.navId];
-        AppModel.activeNavItem = $scope.findActiveNavItem($scope.navItems, $state.params.pageId);
+        $scope.activeNavItem = $scope.findActiveNavItem($scope.navItems, $state.params.pageId);
 
     });
 

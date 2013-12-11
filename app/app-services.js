@@ -8,42 +8,41 @@
         var appModel = {};
 
         appModel.dashboard = [
-            {label:'Widgets', pageId:'widgets'},
-            {label:'Territoire', pageId:'territoire', navId:'territoire'}
+            {label:'Widgets', id:'widgets'},
+            {label:'Territoire', id:'territoire', nav:true}
         ];
 
         appModel.territoire = [
-            {label:'Province Nord', pageId:'province-nord', navId:'province-nord'},
-            {label:'Province Sud', pageId:'province-sud', navId:'province-sud'},
-            {label:'Province des îles Loyauté', pageId:'province-iles', navId:'province-iles'}
+            {label:'Province Nord', id:'province_nord', nav:true},
+            {label:'Province Sud', id:'province_sud', nav:true},
+            {label:'Province des îles Loyauté', id:'province_iles', nav:true}
         ];
 
-        appModel.nordNav = [
-            {label:'communes 1', state:'commune', params:{communeId:'commune1'}},
-            {label:'communes 2', state:'commune', params:{communeId:'commune2'}}
+        appModel.province_nord = [
+            {label:'communes 1', id:'commune_1', nav:true},
+            {label:'communes 2', id:'commune_2', nav:true}
         ];
 
-        appModel.sudNav = [
-            {label:'communes 3', state:'commune', params:{communeId:'commune3'}},
-            {label:'communes 4', state:'commune', params:{communeId:'commune4'}}
+        appModel.province_sud = [
+            {label:'communes 3', id:'commune_3', nav:true},
+            {label:'communes 4', id:'commune_4', nav:true}
         ];
 
-        appModel.ilesNav = [
-            {label:'communes 5', state:'commune', params:{communeId:'commune5'}},
-            {label:'communes 6', state:'commune', params:{communeId:'commune6'}}
+        appModel.province_iles = [
+            {label:'communes 5', id:'commune_5', nav:true},
+            {label:'communes 6', id:'commune_6', nav:true}
         ];
 
-        appModel.commune1Nav = [
-            {label:'Bureau de vote 1', state:'commune.bureau', params:{bureauId:'bureau1'}, options:{location:'replace'}},
-            {label:'Bureau de vote 2', state:'commune.bureau', params:{bureauId:'bureau2'}, options:{location:'replace'}}
+        appModel.commune_1 = [
+            {label:'Bureau de vote 1', id:'bureau_1'},
+            {label:'Bureau de vote 2', id:'bureau_2'}
         ];
 
-        appModel.commune2Nav = [
-            {label:'Bureau de vote 3', state:'commune.bureau', params:{bureauId:'bureau3'}, options:{location:'replace'}},
-            {label:'Bureau de vote 4', state:'commune.bureau', params:{bureauId:'bureau4'}, options:{location:'replace'}}
+        appModel.commune_2 = [
+            {label:'Bureau de vote 3', id:'bureau_3'},
+            {label:'Bureau de vote 4', id:'bureau_4'}
         ];
 
-        appModel.activeNavItem = null;
 
 
         return appModel;

@@ -1,6 +1,6 @@
 <li data-ng-repeat="item in navItems">
     <div data-ng-class="{active: isActiveNavItem(item)}" data-ng-click="onPage(item)">{{item.label}}</div>
-    <button data-ng-show="item.navId" class="btn btn-default btn-lg" data-ng-click="onNav(item)">
+    <button data-ng-show="item.nav" class="btn btn-default btn-lg" data-ng-click="onNav(item)">
         <span class="glyphicon glyphicon-chevron-right"></span>
     </button>
 </li>

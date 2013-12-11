@@ -38,7 +38,10 @@
                     views: {
                         'page@': {
                             templateUrl: function (stateParams) {
-                                return 'page/' + stateParams.pageId + '.html';
+
+                                var page = stateParams.pageId.split('_')[0];
+
+                                return 'page/' + page + '.html';
                             }
 //                            controller: 'DashboardCtrl'
                         }
