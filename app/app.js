@@ -5,8 +5,8 @@
 
     var module = angular.module('App',
             [
-                'Globals',
-                'Utils',
+//                'Globals',
+//                'Utils',
                 'ngMobile',
                 'ui.router',
                 'App.controllers',

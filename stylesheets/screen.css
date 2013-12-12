@@ -13,7 +13,7 @@ a:hover, a:focus {
 
 /* line 18, ../sass/base.scss */
 body, html {
-  background: #f5f5f5;
+  background: #999;
   padding: 0;
   margin: 0;
   width: 100%;
@@ -21,9 +21,102 @@ body, html {
   position: absolute;
 }
 
+/* line 88, ../sass/base.scss */
+.slide-left-enter, .slide-left-leave, .slide-right-enter, .slide-right-leave {
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+/* line 100, ../sass/base.scss */
+.slide-left-enter {
+  opacity: 0;
+  -moz-transform: translate3d(100%, 0, 0);
+  -ms-transform: translate3d(100%, 0, 0);
+  -o-transform: translate3d(100%, 0, 0);
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+}
+
+/* line 105, ../sass/base.scss */
+.slide-left-enter-active {
+  opacity: 1;
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 110, ../sass/base.scss */
+.slide-left-leave {
+  opacity: 1;
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 115, ../sass/base.scss */
+.slide-left-leave-active {
+  opacity: 0;
+  -moz-transform: translate3d(-100%, 0, 0);
+  -ms-transform: translate3d(-100%, 0, 0);
+  -o-transform: translate3d(-100%, 0, 0);
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+}
+
+/* line 122, ../sass/base.scss */
+.slide-right-enter {
+  opacity: 0;
+  -moz-transform: translate3d(-100%, 0, 0);
+  -ms-transform: translate3d(-100%, 0, 0);
+  -o-transform: translate3d(-100%, 0, 0);
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+}
+
+/* line 127, ../sass/base.scss */
+.slide-right-enter-active {
+  opacity: 1;
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 132, ../sass/base.scss */
+.slide-right-leave {
+  opacity: 1;
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 137, ../sass/base.scss */
+.slide-right-leave-active {
+  opacity: 0;
+  -moz-transform: translate3d(100%, 0, 0);
+  -ms-transform: translate3d(100%, 0, 0);
+  -o-transform: translate3d(100%, 0, 0);
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+}
+
 /* line 3, ../sass/content-page.scss */
 .content-page {
   margin-top: 50px;
+  -webkit-transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+  position: absolute;
 }
 
 /* line 3, ../sass/nav-page.scss */
@@ -60,7 +153,13 @@ body, html {
   font-size: 20px;
   margin: 12px;
 }
-/* line 17, ../sass/nav-page.scss */
+/* line 15, ../sass/nav-page.scss */
+.nav-page > section {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+/* line 21, ../sass/nav-page.scss */
 .nav-page > section > ul {
   list-style-type: none;
   top: 0;
@@ -86,15 +185,15 @@ body, html {
   background: royalblue;
   color: #ffffff;
 }
-/* line 21, ../sass/nav-page.scss */
+/* line 25, ../sass/nav-page.scss */
 .nav-page > section > ul li {
   position: relative;
 }
-/* line 24, ../sass/nav-page.scss */
+/* line 28, ../sass/nav-page.scss */
 .nav-page > section > ul li > div {
   padding: 15px 20px;
 }
-/* line 30, ../sass/nav-page.scss */
+/* line 34, ../sass/nav-page.scss */
 .nav-page > section > ul li button {
   position: absolute;
   right: 5px;
@@ -149,13 +248,14 @@ body, html {
   -webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
   position: absolute;
+  overflow: hidden;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
-  background: whitesmoke;
+  -webkit-perspective: 400px;
 }
-/* line 42, ../sass/screen.scss */
+/* line 44, ../sass/screen.scss */
 .main > section.open {
   left: 300px;
 }

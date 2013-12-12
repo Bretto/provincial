@@ -31,13 +31,15 @@
 
     @include box-shadow(0 0 10px 5px rgba(#000,.2));
     position: absolute;
-
+    overflow: hidden;
     left: 0;
     top: 0;
     right: 0;
     bottom: 0;
 
-    background: whitesmoke;
+    -webkit-perspective: 400px;
+
+//    background: whitesmoke;
 
     &.open {
       left: $nav-width;
