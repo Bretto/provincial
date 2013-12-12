@@ -1,58 +1,56 @@
 (function () {
     "use strict";
 
-    var module = angular.module('Navigator', []);
+    var module = angular.module('Navigator', [])
+        .config(function ($urlRouterProvider, $stateProvider) {
 
-    module.controller('NavigatorCtrl', function ($scope, AppModel, $state, $window) {
+            $stateProvider
+                .state('navigator', {
+                    url: '/navigator/:navId',
+                    views: {
+                        'nav@': {
+                            templateUrl: function (stateParams) {
+                                return 'navigator/navigator.html';
+                            },
+                            controller: 'NavigatorCtrl'
+                        }
+                    }
+                })
+                .state('navigator.page', {
+                    url: '/page/:pageId',
+                    views: {
+                        'page@': {
+                            templateUrl: function (stateParams) {
 
-        console.log('NavigatorCtrl');
+                                var page = stateParams.pageId.split('_')[0];
 
-        $scope.onPage = function(item){
-            $scope.activeNavItem = item;
+                                return 'page/' + page + '.html';
+                            }
+//                            controller: 'DashboardCtrl'
+                        }
+                    }
+                });
 
-            var state = 'navigator.page';
-            var params =  {pageId: item.id};
-            var options =  {location:'replace'};
 
-            $state.go(state, params, options);
-        }
+            $urlRouterProvider.otherwise("/navigator/dashboard/page/widgets");
+        })
+        .run(
+        function ($rootScope, $state, $stateParams, $log) {
+            $rootScope.$state = $state;
+            $rootScope.$stateParams = $stateParams;
 
-        $scope.onNav = function(item){
+            $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
 
-            var state = 'navigator.page';
-            var params =  {navId: item.id, pageId: item.id};
-            var options =  {};
+                var direction = !fromParams.isBack;
 
-            $state.go(state, params, options);
-        }
-
-        $scope.onBack = function () {
-            $state.params.isBack = true;
-            $window.history.back();
-        }
-
-        $scope.isActiveNavItem = function (item) {
-            return $scope.activeNavItem === item;
-        }
-
-        $scope.findActiveNavItem = function(items, value){
-
-            var res = null;
-            angular.forEach(items, function(item){
-                if(item.id === value){
-                    res = item;
+                $rootScope.vewSlideAnimation = {
+                    enter: direction ? 'slide-left-enter' : 'slide-right-enter',
+                    leave: direction ? 'slide-left-leave' : 'slide-right-leave'
                 }
             });
-
-            return res;
-        }
+        });
 
 
-        $scope.mainModel = AppModel;
-        $scope.navItems = AppModel[$state.params.navId];
-        $scope.activeNavItem = $scope.findActiveNavItem($scope.navItems, $state.params.pageId);
-
-    });
 
 })();
 

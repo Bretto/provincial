@@ -5,26 +5,6 @@
             [
                 'Dashboard.controllers'
             ])
-//        .config(function ($stateProvider) {
-//            $stateProvider
-//                .state('dashboard', {
-//                    url: '/dashboard/:dashboardId',
-//                    views: {
-//                        'page@': {
-//                            templateUrl: function (stateParams) {
-//                                return 'dashboard/' + stateParams.dashboardId + '.html';
-//                            },
-//                            controller: 'DashboardCtrl'
-//                        },
-//                        'nav@': {
-//                            templateUrl: function (stateParams) {
-//                                return 'dashboard/dashboard-nav.html';
-//                            },
-//                            controller: 'DashboardNavCtrl'
-//                        }
-//                    }
-//                });
-//        });
 
 })();
 
