@@ -18,9 +18,11 @@
     height: 100%;
     position: absolute;
 
+
     >ul{
       @include list-styles;
       margin-top: $header-height;
+
 
       li{
 
@@ -34,7 +36,7 @@
         button{
           position: absolute;
           right: 5px;
-          top: 2px;
+          top: 3px;
         }
       }
     }

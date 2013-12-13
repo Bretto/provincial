@@ -29,9 +29,8 @@ body, html {
   transition: all 0.5s;
 }
 
-/* line 100, ../sass/base.scss */
+/* line 101, ../sass/base.scss */
 .slide-left-enter {
-  opacity: 0;
   -moz-transform: translate3d(100%, 0, 0);
   -ms-transform: translate3d(100%, 0, 0);
   -o-transform: translate3d(100%, 0, 0);
@@ -39,9 +38,8 @@ body, html {
   transform: translate3d(100%, 0, 0);
 }
 
-/* line 105, ../sass/base.scss */
+/* line 106, ../sass/base.scss */
 .slide-left-enter-active {
-  opacity: 1;
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
@@ -49,9 +47,8 @@ body, html {
   transform: translate3d(0, 0, 0);
 }
 
-/* line 110, ../sass/base.scss */
+/* line 111, ../sass/base.scss */
 .slide-left-leave {
-  opacity: 1;
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
@@ -59,9 +56,8 @@ body, html {
   transform: translate3d(0, 0, 0);
 }
 
-/* line 115, ../sass/base.scss */
+/* line 116, ../sass/base.scss */
 .slide-left-leave-active {
-  opacity: 0;
   -moz-transform: translate3d(-100%, 0, 0);
   -ms-transform: translate3d(-100%, 0, 0);
   -o-transform: translate3d(-100%, 0, 0);
@@ -69,9 +65,8 @@ body, html {
   transform: translate3d(-100%, 0, 0);
 }
 
-/* line 122, ../sass/base.scss */
+/* line 123, ../sass/base.scss */
 .slide-right-enter {
-  opacity: 0;
   -moz-transform: translate3d(-100%, 0, 0);
   -ms-transform: translate3d(-100%, 0, 0);
   -o-transform: translate3d(-100%, 0, 0);
@@ -79,9 +74,8 @@ body, html {
   transform: translate3d(-100%, 0, 0);
 }
 
-/* line 127, ../sass/base.scss */
+/* line 128, ../sass/base.scss */
 .slide-right-enter-active {
-  opacity: 1;
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
@@ -89,9 +83,8 @@ body, html {
   transform: translate3d(0, 0, 0);
 }
 
-/* line 132, ../sass/base.scss */
+/* line 133, ../sass/base.scss */
 .slide-right-leave {
-  opacity: 1;
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
@@ -99,9 +92,8 @@ body, html {
   transform: translate3d(0, 0, 0);
 }
 
-/* line 137, ../sass/base.scss */
+/* line 138, ../sass/base.scss */
 .slide-right-leave-active {
-  opacity: 0;
   -moz-transform: translate3d(100%, 0, 0);
   -ms-transform: translate3d(100%, 0, 0);
   -o-transform: translate3d(100%, 0, 0);
@@ -159,14 +151,13 @@ body, html {
   height: 100%;
   position: absolute;
 }
-/* line 21, ../sass/nav-page.scss */
+/* line 22, ../sass/nav-page.scss */
 .nav-page > section > ul {
   list-style-type: none;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  position: absolute;
   margin: 0;
   -webkit-overflow-scrolling: touch;
   overflow-y: scroll;
@@ -185,23 +176,23 @@ body, html {
   background: royalblue;
   color: #ffffff;
 }
-/* line 25, ../sass/nav-page.scss */
+/* line 27, ../sass/nav-page.scss */
 .nav-page > section > ul li {
   position: relative;
 }
-/* line 28, ../sass/nav-page.scss */
+/* line 30, ../sass/nav-page.scss */
 .nav-page > section > ul li > div {
   padding: 15px 20px;
 }
-/* line 34, ../sass/nav-page.scss */
+/* line 36, ../sass/nav-page.scss */
 .nav-page > section > ul li button {
   position: absolute;
   right: 5px;
-  top: 2px;
+  top: 3px;
 }
 
 /* line 7, ../sass/screen.scss */
-.main > header {
+.snap-content > header {
   position: absolute;
   top: 0;
   left: 0;
@@ -209,41 +200,28 @@ body, html {
   height: 50px;
   background: white;
 }
-/* line 9, ../sass/screen.scss */
-.main > header.open {
-  left: 300px;
-}
 /* line 34, ../sass/base.scss */
-.main > header button {
+.snap-content > header button {
   margin: 2px;
   border-color: transparent !important;
   background-color: transparent !important;
   position: absolute;
 }
 /* line 40, ../sass/base.scss */
-.main > header button.btn-header-left {
+.snap-content > header button.btn-header-left {
   left: 0;
 }
 /* line 44, ../sass/base.scss */
-.main > header button.btn-header-right {
+.snap-content > header button.btn-header-right {
   right: 0;
 }
 /* line 49, ../sass/base.scss */
-.main > header h1 {
+.snap-content > header h1 {
   text-align: center;
   margin: 3px 0;
 }
-/* line 18, ../sass/screen.scss */
-.main > nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 300px;
-  background: gainsboro;
-}
-/* line 30, ../sass/screen.scss */
-.main > section {
+/* line 20, ../sass/screen.scss */
+.snap-content > section {
   -moz-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
@@ -255,7 +233,86 @@ body, html {
   bottom: 0;
   -webkit-perspective: 400px;
 }
+
 /* line 44, ../sass/screen.scss */
-.main > section.open {
-  left: 300px;
+.snap-drawer > nav {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  background: gainsboro;
+}
+
+/* line 61, ../sass/screen.scss */
+.snap-content,
+.snap-drawers,
+.snap-content {
+  position: absolute;
+  height: auto;
+  top: 0;
+  bottom: 0;
+  width: auto;
+  left: 0;
+  right: 0;
+}
+
+/* line 74, ../sass/screen.scss */
+.snap-drawer {
+  position: absolute;
+  height: auto;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+  -webkit-transition: top 0.2s linear;
+  -moz-transition: top 0.2s linear;
+  -o-transition: top 0.2s linear;
+  transition: top 0.2s linear;
+  -webkit-transition: bottom 0.2s linear;
+  -moz-transition: bottom 0.2s linear;
+  -o-transition: bottom 0.2s linear;
+  transition: bottom 0.2s linear;
+  -webkit-overflow-scrolling: touch;
+  -moz-overflow-scrolling: touch;
+  -o-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  width: 300px;
+}
+
+/* line 95, ../sass/screen.scss */
+.snap-content {
+  z-index: 2;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-overflow-scrolling: touch;
+  -moz-overflow-scrolling: touch;
+  -o-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+}
+
+/* line 107, ../sass/screen.scss */
+.snap-drawer-left {
+  left: 0;
+  z-index: 1;
+}
+
+/* line 112, ../sass/screen.scss */
+.snap-drawer-right {
+  right: 0;
+  z-index: 1;
+}
+
+/* line 117, ../sass/screen.scss */
+.snapjs-left .snap-drawer-right,
+.snapjs-right .snap-drawer-left {
+  display: none;
+}
+
+/* line 121, ../sass/screen.scss */
+.snapjs-expand-left .snap-drawer-left,
+.snapjs-expand-right .snap-drawer-right {
+  width: 100%;
 }

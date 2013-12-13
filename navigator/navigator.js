@@ -20,6 +20,9 @@
                     url: '/page/:pageId',
                     views: {
                         'page@': {
+                            data: {
+                              sticky: true
+                            },
                             templateUrl: function (stateParams) {
 
                                 var page = stateParams.pageId.split('_')[0];

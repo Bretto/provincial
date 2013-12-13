@@ -59,7 +59,7 @@ body, html {
   bottom: 0;
   left: 0;
   right: 0;
-  position: absolute;
+//  position: absolute;
   margin: 0;
   -webkit-overflow-scrolling: touch;
   overflow-y: scroll;
@@ -88,7 +88,8 @@ $animTime: .5s;
 .slide-left-enter, .slide-left-leave, .slide-right-enter, .slide-right-leave {
   //delay .1s to hide the flicker due to -webkit-overflow-scrolling: touch;
   //.05s
-//  @include transition( transform cubic-bezier(0.250, 0.460, 0.450, 0.940) $animTime .4s );
+//  @include transition( transform cubic-bezier(0.250, 0.460, 0.450, 0.940) $animTime);
+//  @include transition( transform cubic-bezier(0.250, 0.460, 0.450, 0.940) .5s, .5s);
   @include transition( all $animTime );
 
   //-webkit-perspective: 1000;
@@ -98,43 +99,43 @@ $animTime: .5s;
 }
 
 .slide-left-enter {
-  opacity: 0;
+//  opacity: 0;
   @include transform(translate3d(100%, 0, 0));
 }
 
 .slide-left-enter-active {
-  opacity: 1;
+//  opacity: 1;
   @include transform(translate3d(0, 0, 0));
 }
 
 .slide-left-leave {
-  opacity: 1;
+//  opacity: 1;
   @include transform(translate3d(0, 0, 0));
 }
 
 .slide-left-leave-active {
-  opacity: 0;
+//  opacity: 0;
   @include transform(translate3d(-100%, 0, 0));
 }
 
 //-------------------------------------------
 
 .slide-right-enter {
-  opacity: 0;
+//  opacity: 0;
   @include transform(translate3d(-100%, 0, 0));
 }
 
 .slide-right-enter-active {
-  opacity: 1;
+//  opacity: 1;
   @include transform(translate3d(0, 0, 0));
 }
 
 .slide-right-leave {
-  opacity: 1;
+//  opacity: 1;
   @include transform(translate3d(0, 0, 0));
 }
 
 .slide-right-leave-active {
-  opacity: 0;
+//  opacity: 0;
   @include transform(translate3d(100%, 0, 0));
 }

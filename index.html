@@ -2,34 +2,42 @@
 <html data-ng-app="App">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title></title>
     <link rel='stylesheet' href='libs/bootstrap/css/bootstrap.min.css'/>
     <link rel='stylesheet' href='stylesheets/animations.css'/>
     <link rel='stylesheet' href="stylesheets/screen.css"/>
 </head>
-<body data-ng-controller="AppCtrl" class="main">
+<body data-ng-controller="AppCtrl">
 
-<nav ng-class="{open:mainModel.toggleNavOpen}">
-    <div ui-view="nav" data-ng-animate="vewSlideAnimation"></div>
-</nav>
+<snap-drawer>
+    <nav>
+        <div ui-view="nav" data-ng-animate="vewSlideAnimation"></div>
+    </nav>
+</snap-drawer>
 
-<section ng-class="{open:mainModel.toggleNavOpen}">
-    <div ui-view="page" data-ng-animate="{enter: 'pt-page-rotateSlideIn', leave: 'pt-page-rotateSlideOut'}"></div>
-</section>
-
-<header ng-class="{open:mainModel.toggleNavOpen}">
-    <button class="btn btn-default btn-lg btn-header-left" data-ng-click="mainModel.toggleNavOpen = !mainModel.toggleNavOpen">
-        <span class="glyphicon glyphicon-align-justify"></span>
-    </button>
-    <h1>Elections Provinciales 2014</h1>
-</header>
+<snap-content snap-options="opts">
+    <section>
+        <div ui-view="page" data-ng-animate="{enter: 'pt-page-rotateSlideIn', leave: 'pt-page-rotateSlideOut'}"></div>
+    </section>
+    <header>
+        <button class="btn btn-default btn-lg btn-header-left" snap-toggle>
+            <span class="glyphicon glyphicon-align-justify"></span>
+        </button>
+        <h1>Elections Provinciales 2014</h1>
+    </header>
+</snap-content>
 
 <script src="libs/angular-1.1.5.min.js"></script>
 <script src="libs/jquery.min.js"></script>
+
+<script src="libs/snap.js"></script>
+<script src="libs/angular-snap.js"></script>
 <!--<script src="libs/lodash.min.js"></script>-->
 <!--<script src="libs/underscore.min.js"></script>-->
 <script src="libs/angular-mobile.min.js"></script>
-<script src="libs/angular-ui-router.min.js"></script>
+<script src="libs/angular-ui-router.js"></script>
 <script src="libs/angular-animate.min.js"></script>
 
 <script src="app/app.js"></script>
@@ -53,6 +61,7 @@
 
 <script src="navigator/navigator.js"></script>
 <script src="navigator/navigator-controllers.js"></script>
+
 
 </body>
 </html>

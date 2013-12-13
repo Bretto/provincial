@@ -7,6 +7,7 @@
             [
 //                'Globals',
 //                'Utils',
+                'snap',
                 'ngMobile',
                 'ui.router',
                 'App.controllers',
