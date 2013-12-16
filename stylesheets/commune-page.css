@@ -1,0 +1,35 @@
+/* line 3, ../sass/commune-page.scss */
+.commune-page .commune-svg {
+  height: 300px;
+  margin: 40px 0;
+}
+/* line 9, ../sass/commune-page.scss */
+.commune-page i {
+  font-size: 30px;
+}
+/* line 24, ../sass/commune-page.scss */
+.commune-page h2, .commune-page h4 {
+  margin-top: 0;
+}
+/* line 29, ../sass/commune-page.scss */
+.commune-page .bar-graph {
+  background: royalblue;
+  height: 40px;
+}
+/* line 36, ../sass/commune-page.scss */
+.commune-page .middle-text h4 {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+/* line 43, ../sass/commune-page.scss */
+.commune-page .bv-count {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin-top: 150px;
+}
+/* line 50, ../sass/commune-page.scss */
+.commune-page .bv-count h1 {
+  margin-bottom: 0;
+}

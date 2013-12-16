@@ -1,3 +1,64 @@
-<div class="content-page">
-    <h1>{{$state.params.pageId}}</h1>
+<div class="content-page commune-page">
+
+
+    <section>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <i class="fa fa-unlock pull-right"></i>
+
+                <h1>{{$state.params.pageId}}</h1>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h1>1539</h1>
+                        <h4>Inscrits</h4>
+                    </div>
+                    <div class="col-sm-6 text-right">
+                        <h1>1539</h1>
+                        <h4>Votants</h4>
+                    </div>
+                </div>
+
+                <div class="bar-graph"></div>
+
+                <div class="bv-count">
+                    <h1>39</h1>
+                    <h4>Bureau de vote</h4>
+                </div>
+                <div class="commune-svg" ng-include="'svg/noumea.svg'"></div>
+
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h1>1262</h1>
+                    </div>
+                    <div class="col-sm-4 text-center middle-text">
+                        <h4>Exprimés</h4>
+                    </div>
+                    <div class="col-sm-4 text-left">
+                        <h1>98.90%</h1>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h1>14</h1>
+                    </div>
+                    <div class="col-sm-4 text-center middle-text">
+                        <h4>Blanc/Nuls</h4>
+                    </div>
+                    <div class="col-sm-4 text-left">
+                        <h1>1.10%</h1>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-sm-6">
+                <h1>Résultats</h1>
+
+            </div>
+        </div>
+    </section>
+
 </div>

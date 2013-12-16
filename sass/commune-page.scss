@@ -1,0 +1,55 @@
+.commune-page{
+
+  .commune-svg{
+    height: 300px;
+    margin: 40px 0;
+  }
+
+
+i{
+
+  font-size: 30px;
+
+//  &:before {
+//    content: "";
+//    position: absolute;
+//    @include border-radius(50%);
+//    width: 40px;
+//    height: 40px;
+//    background: red;
+//  }
+}
+
+
+  h2, h4{
+    margin-top: 0;
+  }
+
+  
+  .bar-graph{
+    background: royalblue;
+    height: 40px;
+  }
+
+  .middle-text{
+
+    h4{
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+
+  }
+
+  .bv-count{
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin-top: 150px;
+
+    h1{
+      margin-bottom: 0;
+    }
+  }
+
+}
