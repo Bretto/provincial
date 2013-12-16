@@ -52,4 +52,41 @@ i{
     }
   }
 
+
+
+
+  .pie-menu{
+    position: absolute;
+    margin-top: -200px;
+    margin-left: -200px;
+    z-index:1000;
+  }
+
+
+  /*.svgPie{*/
+  /*position: absolute;*/
+  /*}*/
+
+  g text{
+    fill: white;
+    pointer-events:none;
+    text-shadow: 1px 1px #000;
+  }
+
+  path{
+    cursor: pointer;
+    fill: rgba(255, 0, 0, 0.2);
+    stroke: rgba(255, 0, 0, 0.2);
+  }
+
+  /*g:hover path{*/
+  /*fill: rgba(256, 0, 0, 0.6);*/
+  /*}*/
+
+
+  path:hover{
+    fill: rgba(255, 0, 0, 0.6);
+  }
+
+
 }

@@ -1,3 +1,12 @@
+/* line 1, ../sass/commune-page.scss */
+.commune-page {
+  /*.svgPie{*/
+  /*position: absolute;*/
+  /*}*/
+  /*g:hover path{*/
+  /*fill: rgba(256, 0, 0, 0.6);*/
+  /*}*/
+}
 /* line 3, ../sass/commune-page.scss */
 .commune-page .commune-svg {
   height: 300px;
@@ -32,4 +41,27 @@
 /* line 50, ../sass/commune-page.scss */
 .commune-page .bv-count h1 {
   margin-bottom: 0;
+}
+/* line 58, ../sass/commune-page.scss */
+.commune-page .pie-menu {
+  position: absolute;
+  margin-top: -200px;
+  margin-left: -200px;
+  z-index: 1000;
+}
+/* line 70, ../sass/commune-page.scss */
+.commune-page g text {
+  fill: white;
+  pointer-events: none;
+  text-shadow: 1px 1px #000;
+}
+/* line 76, ../sass/commune-page.scss */
+.commune-page path {
+  cursor: pointer;
+  fill: rgba(255, 0, 0, 0.2);
+  stroke: rgba(255, 0, 0, 0.2);
+}
+/* line 87, ../sass/commune-page.scss */
+.commune-page path:hover {
+  fill: rgba(255, 0, 0, 0.6);
 }

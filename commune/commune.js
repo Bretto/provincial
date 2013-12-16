@@ -8,6 +8,11 @@
 
         $scope.mainModel = AppModel;
 
+        $scope.pieData =[{"label":"Root Scope", "value":1},
+            {"label":"Parent Scope", "value":1},
+            {"label":"Child Scope", "value":1}
+        ]
+
     });
 
 

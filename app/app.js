@@ -19,7 +19,8 @@
                 'Commune',
                 'Bureau',
                 'Navigator',
-                'Navigator.controllers'
+                'Navigator.controllers',
+                'PieChart'
             ])
 
 
